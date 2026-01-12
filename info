@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>Informações | Ametista – Espaço de Yoga em BH</title>
+  <meta name="description" content="Aulas de Hatha Yoga no bairro Santo Antônio (BH). Turmas pequenas, práticas de asanas, pranayamas e relaxamento (Yoga Nidra). Agende sua aula experimental." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://SEU_DOMINIO/informacoes" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ametista – Espaço de Yoga" />
+  <meta property="og:title" content="Informações | Ametista – Espaço de Yoga em BH" />
+  <meta property="og:description" content="Hatha Yoga • Respiração • Relaxamento. Agende sua aula experimental pelo WhatsApp." />
+  <meta property="og:url" content="https://SEU_DOMINIO/informacoes" />
+  <meta property="og:image" content="https://SEU_DOMINIO/assets/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Informações | Ametista – Espaço de Yoga em BH" />
+  <meta name="twitter:description" content="Aulas de Hatha Yoga no Santo Antônio (BH). Agende uma aula experimental." />
+  <meta name="twitter:image" content="https://SEU_DOMINIO/assets/og-cover.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#cf5f36" />
+
+  <!-- Schema (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Ametista - Espaço de Yoga",
+    "description":"Aulas de Hatha Yoga em Belo Horizonte (Santo Antônio). Turmas pequenas, asanas, pranayamas e Yoga Nidra. Aula experimental via WhatsApp.",
+    "url":"https://SEU_DOMINIO/",
+    "image":"https://SEU_DOMINIO/assets/og-cover.jpg",
+    "telephone":"+55-31-99708-7839",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Belo Horizonte",
+      "addressRegion":"MG",
+      "addressCountry":"BR",
+      "streetAddress":"Bairro Santo Antônio"
+    },
+    "sameAs":[
+      "https://instagram.com/ametistayogabh"
+    ],
+    "areaServed":"Belo Horizonte"
+  }
+  </script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#222;
+      --muted:#6e6e6e;
+      --soft:#f4f4f6;
+      --line:#efdfd7;
+      --accent:#cf5f36;
+      --accent-2:#e8c8bb;
+      --card:#ffffff;
+      --shadow: 0 10px 25px rgba(0,0,0,.08);
+      --radius: 16px;
+      --wrap: 1080px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family:"Montserrat",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; display:block; }
+    .wrap{ max-width:var(--wrap); margin:0 auto; padding:0 16px; }
+
+    /* Acessibilidade */
+    .sr-only{
+      position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); border:0;
+    }
+
+    /* Header (mobile-first) */
+    .header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:saturate(140%) blur(8px);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .header-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px; padding:12px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width:0;
+    }
+    .brand img{ width:26px; height:26px; object-fit:contain; border-radius:6px; }
+    .brand span{
+      font-size:12px; font-weight:500; color:#444;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+      max-width: 46vw;
+    }
+
+    .nav{
+      display:flex; align-items:center; gap:10px;
+      font-size:11px; font-weight:700;
+    }
+    .nav a{
+      padding:8px 10px;
+      border-radius:999px;
+      background:transparent;
+      color:#2a2a2a;
+    }
+    .nav a.active{
+      background:var(--accent-2);
+    }
+    .nav .search{
+      width:36px; height:36px;
+      display:grid; place-items:center;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.08);
+      background:#fff;
+    }
+    .nav .search svg{ width:16px; height:16px; opacity:.85; }
+
+    /* Hero */
+    .hero{
+      position:relative;
+      min-height: 44vh;
+      display:flex;
+      align-items:flex-end;
+      border-bottom:3px solid var(--line);
+      background:#111;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55)),
+        url("assets/info-hero.jpg") center/cover no-repeat;
+      transform:scale(1.02);
+    }
+    .hero-content{
+      position:relative;
+      width:100%;
+      padding:22px 0 18px;
+      color:#fff;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:8px; align-items:center;
+      font-size:11px; font-weight:700;
+      letter-spacing:.25px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      padding:8px 10px;
+      border-radius:999px;
+    }
+    .hero h1{
+      margin:14px 0 10px;
+      font-size:24px;
+      line-height:1.15;
+      letter-spacing:.2px;
+    }
+    .hero p{
+      margin:0;
+      color:rgba(255,255,255,.9);
+      font-size:13px;
+      line-height:1.6;
+      max-width: 52ch;
+    }
+
+    /* CTA principal (no conteúdo) */
+    .cta-row{
+      display:flex; flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.10);
+      color:#fff;
+    }
+    .btn.primary{
+      background:var(--accent);
+      border-color: rgba(0,0,0,.08);
+      color:#fff;
+    }
+    .btn svg{ width:16px; height:16px; }
+
+    /* Conteúdo */
+    .section{
+      padding:18px 0;
+      background: #fff;
+    }
+
+    .intro{
+      margin-top:-18px;
+    }
+    .panel{
+      background:var(--card);
+      border:1px solid rgba(0,0,0,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:16px;
+    }
+    .intro p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid rgba(0,0,0,.08);
+      border-radius: var(--radius);
+      padding:16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.06);
+    }
+    .card h2{
+      margin:0 0 10px;
+      font-size:16px;
+      line-height:1.2;
+      letter-spacing:.2px;
+    }
+    .meta{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-bottom:12px;
+    }
+    .pill{
+      font-size:11px;
+      font-weight:800;
+      color:#2a2a2a;
+      background: #f2f2f4;
+      border: 1px solid rgba(0,0,0,.06);
+      padding:7px 10px;
+      border-radius:999px;
+    }
+    .card p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .list{
+      margin:10px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:8px;
+    }
+    .list li{
+      display:flex; gap:10px;
+      align-items:flex-start;
+      color:#4d4d4d;
+      font-size:13px;
+      line-height:1.6;
+    }
+    .check{
+      width:18px; height:18px;
+      flex:0 0 18px;
+      border-radius:6px;
+      background: rgba(207,95,54,.12);
+      display:grid; place-items:center;
+      margin-top:2px;
+    }
+    .check svg{ width:14px; height:14px; color:var(--accent); }
+
+    /* Horários */
+    .schedule{
+      margin-top:14px;
+      background: linear-gradient(180deg, #ffffff, #fff7f3);
+      border:1px solid rgba(207,95,54,.18);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .schedule h3{
+      margin:0 0 10px;
+      font-size:14px;
+      letter-spacing:.2px;
+    }
+    .schedule .rows{
+      display:grid;
+      gap:10px;
+    }
+    .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 12px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:12px;
+      font-size:13px;
+    }
+    .row strong{ font-weight:800; }
+    .row span{ color:var(--muted); font-size:12px; }
+
+    /* Depoimentos (faixa laranja, mas mais legível) */
+    .testimonials{
+      margin-top:18px;
+      background:var(--accent);
+      color:#fff;
+      padding:18px 0 22px;
+    }
+    .testimonials h2{
+      margin:0 0 12px;
+      font-size:16px;
+      letter-spacing:.2px;
+    }
+    .quotes{
+      display:grid;
+      gap:12px;
+    }
+    .quote{
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius);
+      padding:14px;
+    }
+    .quote p{
+      margin:0;
+      font-size:13px;
+      line-height:1.7;
+      color:rgba(255,255,255,.92);
+    }
+    .quote strong{
+      display:block;
+      margin-top:10px;
+      font-size:12px;
+      color:rgba(255,255,255,.95);
+    }
+
+    /* Rodapé */
+    .footer{
+      padding:18px 0 86px; /* espaço pro CTA fixo no mobile */
+      background:#fff;
+      border-top:1px solid rgba(0,0,0,.06);
+    }
+    .footer-inner{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    .footer small{
+      display:block;
+      font-size:11px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+    .handle{
+      margin-top:6px;
+      font-weight:800;
+      color:#2f2f2f;
+    }
+    .ig{
+      width:44px; height:44px;
+      display:grid; place-items:center;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.08);
+      background:#fff;
+      align-self:flex-start;
+    }
+    .ig svg{ width:22px; height:22px; }
+
+    /* CTA fixo mobile */
+    .sticky-cta{
+      position:fixed;
+      left:12px; right:12px;
+      bottom:12px;
+      z-index:60;
+      display:flex;
+      gap:10px;
+    }
+    .sticky-cta a{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 16px;
+      border-radius: 999px;
+      font-size:13px;
+      font-weight:900;
+      background: var(--accent);
+      color:#fff;
+      box-shadow: 0 18px 35px rgba(0,0,0,.22);
+      border: 1px solid rgba(0,0,0,.08);
+    }
+    .sticky-cta svg{ width:18px; height:18px; }
+
+    /* Desktop enhancements */
+    @media (min-width: 860px){
+      .wrap{ padding:0 22px; }
+      .hero{ min-height: 420px; }
+      .hero h1{ font-size:34px; }
+      .hero p{ font-size:14px; }
+      .grid{ grid-template-columns: 1fr 1fr; gap:16px; }
+      .intro{ margin-top:-22px; }
+      .panel{ padding:18px; }
+      .footer-inner{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:flex-end;
+      }
+      .sticky-cta{ display:none; }
+      .footer{ padding-bottom:26px; }
+      .nav{ gap:8px; }
+      .brand span{ max-width:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="wrap">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Voltar para o início">
+          <img src="assets/logo-mini.png" alt="">
+          <span>Ametista - Espaço de Yoga</span>
+        </a>
+
+        <nav class="nav" aria-label="Menu">
+          <a href="index.html#inicio">Início</a>
+          <a class="active" href="#informacoes">Informações</a>
+          <a href="index.html#local">Local</a>
+          <a href="index.html#sobre">Sobre mim</a>
+          <a href="index.html#inscreva">Inscreva-se</a>
+          <a class="search" href="#buscar" aria-label="Buscar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="M21 21l-4.3-4.3"></path>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Informações">
+    <div class="wrap hero-content">
+      <span class="kicker">Informações • Hatha Yoga • BH</span>
+      <h1>Yoga no Santo Antônio, BH<br><span style="font-weight:600;">Aulas acessíveis e acolhedoras</span></h1>
+      <p>
+        Turmas pequenas, acompanhamento cuidadoso e uma prática completa: posturas (Asanas),
+        respiração (Pranayamas) e relaxamento profundo (Yoga Nidra).
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" id="cta-hero-whatsapp"
+           href="https://wa.me/SEU_NUMERO_AQUI"
+           target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 11.5a8.5 8.5 0 1 1-3.2-6.6"></path>
+            <path d="M20 4v6h-6"></path>
+          </svg>
+          Agendar aula experimental
+        </a>
+
+        <a class="btn" href="#aulas">
+          Ver detalhes das aulas
+        </a>
+      </div>
+
+      <h2 class="sr-only">Ametista – Espaço de Yoga</h2>
+    </div>
+  </section>
+
+  <!-- Conteúdo -->
+  <main class="section" id="informacoes">
+    <div class="wrap intro">
+      <div class="panel">
+        <p>
+          Somos um espaço de Yoga localizado no <strong>bairro Santo Antônio</strong>, em Belo Horizonte.
+          Aqui você encontra uma prática segura, respeitosa ao seu ritmo e pensada para melhorar
+          força, flexibilidade, respiração, sono e bem-estar.
+        </p>
+      </div>
+
+      <!-- Aulas -->
+      <div class="grid" id="aulas">
+        <!-- Coletivas -->
+        <article class="card">
+          <h2>Aulas coletivas</h2>
+          <div class="meta">
+            <span class="pill">Duração: 1h15</span>
+            <span class="pill">Turma: até 6 alunos</span>
+            <span class="pill">Hatha Yoga</span>
+          </div>
+
+          <p>
+            Aula completa com <strong>Asanas</strong> (posturas psicofísicas),
+            <strong>Pranayamas</strong> (práticas respiratórias) e
+            <strong>Yoga Nidra</strong> (relaxamento profundo).
+          </p>
+
+          <ul class="list">
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>
+              Aumenta flexibilidade, força e vitalidade.
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>
+              Ajuda a reduzir ansiedade e estresse e melhora o sono.
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>
+              Acessível para iniciantes (movimentos explicados e demonstrados).
+            </li>
+          </ul>
+
+          <div class="schedule" aria-label="Horários aulas coletivas">
+            <h3>Horários (aulas coletivas)</h3>
+            <div class="rows">
+              <div class="row">
+                <strong>Quarta-feira</strong>
+                <span>20h</span>
+              </div>
+              <div class="row">
+                <strong>Quinta-feira</strong>
+                <span>20h</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Particulares -->
+        <article class="card">
+          <h2>Aulas particulares</h2>
+          <div class="meta">
+            <span class="pill">Atendimento personalizado</span>
+            <span class="pill">No espaço ou em casa</span>
+            <span class="pill">Horários flexíveis</span>
+          </div>
+
+          <p>
+            Práticas adaptadas para suas necessidades, com acompanhamento próximo e plano
+            de evolução de acordo com seu ritmo e objetivos.
+          </p>
+
+          <ul class="list">
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>
+              Indicado para dores (costas, joelho, quadril), estresse e ansiedade.
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>
+              Ótimo para iniciantes que preferem mais orientação.
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>
+              Aulas em horários que se adequam à sua rotina.
+            </li>
+          </ul>
+
+          <div class="schedule" aria-label="Como agendar aulas particulares">
+            <h3>Como funciona</h3>
+            <div class="rows">
+              <div class="row">
+                <strong>Agendamento</strong>
+                <span>via WhatsApp</span>
+              </div>
+              <div class="row">
+                <strong>Local</strong>
+                <span>espaço ou casa do aluno</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <a class="btn primary" id="cta-card-whatsapp"
+               href="https://wa.me/SEU_NUMERO_AQUI"
+               target="_blank" rel="noreferrer"
+               style="width:100%; justify-content:center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 11.5a8.5 8.5 0 1 1-3.2-6.6"></path>
+                <path d="M20 4v6h-6"></path>
+              </svg>
+              Quero agendar
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Para quem é -->
+      <section class="section" style="padding:14px 0 8px;">
+        <div class="card">
+          <h2>Para quem é o Yoga na Ametista?</h2>
+          <p>As aulas são ideais para você que:</p>
+          <ul class="list">
+            <li><span class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+            </span> Quer aliviar dores e melhorar a postura.</li>
+            <li><span class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+            </span> Busca mais qualidade de sono e bem-estar.</li>
+            <li><span class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+            </span> Está ansiosa(o) / estressada(o) e quer desacelerar.</li>
+            <li><span class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+            </span> Nunca praticou Yoga e quer começar com segurança.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Depoimentos -->
+  <section class="testimonials" aria-label="Depoimentos">
+    <div class="wrap">
+      <h2>Alguns depoimentos espontâneos de alunos</h2>
+
+      <div class="quotes">
+        <div class="quote">
+          <p>“Obrigada mais uma vez Cris, eu estava aqui com umas dores e tô beeeem melhor, joelho, torcicolo, agora estou esperando o bebê dormir bem mais leve.”</p>
+          <strong>— Ariane</strong>
+        </div>
+
+        <div class="quote">
+          <p>“Nossa Cris!! Acabei de falar com meu marido que eu achei o que eu procurava!!! Eu estava com dor nas costas e agora tô nova!! Rs... Amei muito!! Muuuito obrigada mesmo!!”</p>
+          <strong>— Letícia</strong>
+        </div>
+
+        <div class="quote">
+          <p>“Se eu soubesse há mais tempo que era tão maravilhoso já teria feito viu. Vou contar os dias para a próxima aula, dormi profundamente.”</p>
+          <strong>— Carla</strong>
+        </div>
+
+        <div class="quote">
+          <p>“Estava passando por um puerpério difícil e confuso... Desde que comecei o Yoga com você me sinto mais equilibrada, disposta, a coluna e a pelve melhoraram demais... Na primeira aula eu consegui sorrir de verdade.”</p>
+          <strong>— Ana</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Rodapé">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <small>Professora: Cristiane Frade</small>
+          <small>Certificada pelo Satyananda Yoga Center.</small>
+          <small>Espaço de Yoga, bairro Santo Antônio, BH.</small>
+          <br>
+          <small>Contato: 31 99708-7839</small>
+          <small class="handle">@ametistayogabh</small>
+        </div>
+
+        <a class="ig" href="https://instagram.com/ametistayogabh" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#cf5f36" stroke-width="2">
+            <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17" cy="7" r="1"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CTA fixo no mobile -->
+  <div class="sticky-cta" aria-label="Agendar no WhatsApp">
+    <a id="cta-sticky-whatsapp" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 11.5a8.5 8.5 0 1 1-3.2-6.6"></path>
+        <path d="M20 4v6h-6"></path>
+      </svg>
+      Agendar aula experimental
+    </a>
+  </div>
+
+  <!-- (Opcional) Tagueamento por dataLayer (GTM/GA4) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function dlPush(eventName, payload){
+      window.dataLayer.push(Object.assign({ event: eventName }, payload || {}));
+    }
+
+    document.addEventListener('click', function(e){
+      const a = e.target.closest('a');
+      if(!a) return;
+
+      const id = a.id || '';
+      const url = a.href || '';
+
+      if(id.includes('cta') && url.includes('wa.me')){
+        dlPush('cta_click', { cta_name: 'whatsapp', cta_location: id, link_url: url });
+      }
+    });
+
+    (function(){
+      const marks = [25,50,75,90];
+      const fired = new Set();
+      function onScroll(){
+        const doc = document.documentElement;
+        const st = doc.scrollTop || document.body.scrollTop;
+        const sh = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+        if(sh <= 0) return;
+        const pct = Math.round((st / sh) * 100);
+        marks.forEach(m => {
+          if(pct >= m && !fired.has(m)){
+            fired.add(m);
+            dlPush('scroll_depth', { percent: m });
+          }
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive:true });
+    })();
+  </script>
+</body>
+</html>
