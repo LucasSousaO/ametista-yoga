@@ -1,0 +1,87 @@
+
+  /* Slider de depoimentos */
+  .t-slider{
+    position:relative;
+    margin-top:14px;
+  }
+
+  .t-track{
+    display:flex;
+    gap:12px;
+    overflow:auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior:smooth;
+    padding: 6px 2px 12px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .t-track::-webkit-scrollbar{ height:8px; }
+  .t-track::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,.22);
+    border-radius:999px;
+  }
+
+  .t-card{
+    flex: 0 0 88%;
+    scroll-snap-align: start;
+    background: rgba(255,255,255,.10);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 16px;
+    padding: 16px;
+  }
+  .t-card p{
+    margin:0;
+    font-size:13px;
+    line-height:1.75;
+    color: rgba(255,255,255,.92);
+  }
+  .t-card strong{
+    display:block;
+    margin-top:12px;
+    font-size:12px;
+    font-weight:800;
+    color: rgba(255,255,255,.96);
+  }
+
+  .t-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-58%);
+    width:42px;
+    height:42px;
+    border-radius:999px;
+    border: 1px solid rgba(255,255,255,.22);
+    background: rgba(0,0,0,.14);
+    color:#fff;
+    font-size:22px;
+    line-height:1;
+    display:none; /* aparece no desktop */
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+  .t-btn:hover{ background: rgba(0,0,0,.22); }
+  .t-btn.prev{ left: -6px; }
+  .t-btn.next{ right: -6px; }
+
+  .t-dots{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    margin-top:10px;
+  }
+  .t-dot{
+    width:8px; height:8px;
+    border-radius:999px;
+    border: 1px solid rgba(255,255,255,.40);
+    background: rgba(255,255,255,.18);
+    cursor:pointer;
+  }
+  .t-dot[aria-current="true"]{
+    background:#fff;
+    border-color:#fff;
+  }
+
+  @media (min-width: 860px){
+    .t-card{ flex-basis: 48%; }   /* 2 cards por “tela” no desktop */
+    .t-btn{ display:flex; }
+  }
