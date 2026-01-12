@@ -16,7 +16,7 @@
   <meta property="og:title" content="Informações | Ametista – Espaço de Yoga em BH" />
   <meta property="og:description" content="Hatha Yoga • Respiração • Relaxamento. Agende sua aula experimental pelo WhatsApp." />
   <meta property="og:url" content="https://SEU_DOMINIO/informacoes" />
-  <meta property="og:image" content="https://SEU_DOMINIO/assets/og-cover.jpg" />
+  <meta property="og:image" content="https://SEU_DOMINIO/assets/og-cover.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -24,11 +24,11 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Informações | Ametista – Espaço de Yoga em BH" />
   <meta name="twitter:description" content="Aulas de Hatha Yoga no Santo Antônio (BH). Agende uma aula experimental." />
-  <meta name="twitter:image" content="https://SEU_DOMINIO/assets/og-cover.jpg" />
+  <meta name="twitter:image" content="https://SEU_DOMINIO/assets/og-cover.webp" />
 
   <!-- Favicons -->
   <link rel="icon" href="assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.webp" />
   <meta name="theme-color" content="#cf5f36" />
 
   <!-- Schema (SEO local) -->
@@ -39,7 +39,7 @@
     "name":"Ametista - Espaço de Yoga",
     "description":"Aulas de Hatha Yoga em Belo Horizonte (Santo Antônio). Turmas pequenas, asanas, pranayamas e Yoga Nidra. Aula experimental via WhatsApp.",
     "url":"https://SEU_DOMINIO/",
-    "image":"https://SEU_DOMINIO/assets/og-cover.jpg",
+    "image":"https://SEU_DOMINIO/assets/og-cover.webp",
     "telephone":"+55-31-99708-7839",
     "address":{
       "@type":"PostalAddress",
@@ -154,7 +154,7 @@
       position:absolute; inset:0;
       background:
         linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55)),
-        url("assets/info-hero.jpg") center/cover no-repeat;
+        url("assets/info-hero.webp") center/cover no-repeat;
       transform:scale(1.02);
     }
     .hero-content{
@@ -452,7 +452,7 @@
     <div class="wrap">
       <div class="header-inner">
         <a class="brand" href="index.html" aria-label="Voltar para o início">
-          <img src="assets/logo-mini.png" alt="">
+          <img src="assets/logo-mini.webp" alt="">
           <span>Ametista - Espaço de Yoga</span>
         </a>
 
