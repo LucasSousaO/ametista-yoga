@@ -83,7 +83,7 @@
       display:flex;
       align-items:flex-end;
       border-bottom:3px solid var(--line);
-      background:#111;
+      background:##e8c8bb;
       overflow:hidden;
     }
     .hero::before{
@@ -129,6 +129,7 @@
       display:flex; flex-wrap:wrap;
       gap:10px;
       margin-top:14px;
+padding-bottom:22px;
     }
     .btn{
       display:inline-flex;
