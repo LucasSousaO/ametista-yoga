@@ -19,7 +19,7 @@
     }
 
     a{ color:inherit; text-decoration:none; }
-    .wrap{ max-width:var(--container); margin:0 auto; padding:0 24px; }
+    .page-info .wrap{ max-width:var(--container); margin:0 auto; padding:0 24px; }
 
     /* HEADER */
     .page-info .header{
@@ -82,7 +82,7 @@
     }
 
     /* HERO */
-    .hero{
+    page-info .hero{
       min-height: 520px;
       display:flex;
       align-items:center;
@@ -237,5 +237,5 @@
       .brand{ min-width:auto; }
       .nav{ gap:14px; flex-wrap:wrap; justify-content:flex-end; }
       .cta a{ min-width: min(420px, 90vw); }
-      .hero{ min-height: 440px; }
+      page-info .hero{ min-height: 440px; }
     }
