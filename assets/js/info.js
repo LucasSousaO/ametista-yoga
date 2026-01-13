@@ -1,52 +1,54 @@
-(function(){
-  const btn = document.querySelector('.nav-toggle');
-  const menu = document.getElementById('mobileMenu');
-  const overlay = document.getElementById('navOverlay');
+// info.js — slider depoimentos
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.querySelector('[data-slider]');
+  if(!root) return;
 
-  if(!btn || !menu || !overlay) return;
+  const track = root.querySelector('[data-track]');
+  const dotsWrap = root.querySelector('[data-dots]');
+  const prevBtn = root.querySelector('[data-prev]');
+  const nextBtn = root.querySelector('[data-next]');
+  const cards = Array.from(track.querySelectorAll('.t-card'));
+  if(!track || !dotsWrap || cards.length === 0) return;
 
-  function openMenu(){
-    btn.classList.add('is-open');
-    menu.classList.add('is-open');
-    btn.setAttribute('aria-expanded','true');
-    overlay.hidden = false;
-    menu.hidden = false;
-    document.documentElement.style.overflow = 'hidden';
+  // dots
+  dotsWrap.innerHTML = cards.map((_, i) =>
+    `<button class="t-dot" type="button" aria-label="Ir para depoimento ${i+1}" ${i===0 ? 'aria-current="true"' : ''}></button>`
+  ).join('');
+  const dots = Array.from(dotsWrap.querySelectorAll('.t-dot'));
+
+  function cardStep(){
+    const rect = cards[0].getBoundingClientRect();
+    const gap = parseFloat(getComputedStyle(track).gap || '12') || 12;
+    return rect.width + gap;
   }
 
-  function closeMenu(){
-    btn.classList.remove('is-open');
-    menu.classList.remove('is-open');
-    btn.setAttribute('aria-expanded','false');
-    overlay.hidden = true;
-
-    // espera a animação terminar antes de esconder de vez
-    window.setTimeout(() => { menu.hidden = true; }, 220);
-    document.documentElement.style.overflow = '';
+  function setActiveDot(){
+    const step = cardStep();
+    const idx = Math.round(track.scrollLeft / step);
+    dots.forEach((d,i) => d.setAttribute('aria-current', i === idx ? 'true' : 'false'));
   }
 
-  function isOpen(){
-    return btn.classList.contains('is-open');
+  function scrollToIndex(i){
+    const step = cardStep();
+    track.scrollTo({ left: step * i, behavior: 'smooth' });
   }
 
-  btn.addEventListener('click', () => {
-    isOpen() ? closeMenu() : openMenu();
+  dots.forEach((dot, i) => dot.addEventListener('click', () => scrollToIndex(i)));
+
+  if(prevBtn) prevBtn.addEventListener('click', () => {
+    const step = cardStep();
+    track.scrollBy({ left: -step, behavior: 'smooth' });
   });
 
-  overlay.addEventListener('click', closeMenu);
-
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && isOpen()) closeMenu();
+  if(nextBtn) nextBtn.addEventListener('click', () => {
+    const step = cardStep();
+    track.scrollBy({ left: step, behavior: 'smooth' });
   });
 
-  // fecha ao clicar em qualquer link do menu
-  menu.addEventListener('click', (e) => {
-    const a = e.target.closest('a');
-    if(a) closeMenu();
-  });
+  track.addEventListener('scroll', () => {
+    window.requestAnimationFrame(setActiveDot);
+  }, { passive:true });
 
-  // estado inicial (garante fechado)
-  overlay.hidden = true;
-  menu.hidden = true;
-  btn.setAttribute('aria-expanded','false');
-})();
+  // inicial
+  setActiveDot();
+});

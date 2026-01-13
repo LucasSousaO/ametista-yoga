@@ -3,160 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informações | Ametista – Espaço de Yoga</title>
 
-  <!-- SEO -->
-  <title>Informações | Ametista – Espaço de Yoga em BH</title>
-  <meta name="description" content="Aulas de Hatha Yoga no bairro Santo Antônio (BH). Turmas pequenas, práticas de asanas, pranayamas e relaxamento (Yoga Nidra). Agende sua aula experimental." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://ametistayoga.com.br/informacoes" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ametista – Espaço de Yoga" />
-  <meta property="og:title" content="Informações | Ametista – Espaço de Yoga em BH" />
-  <meta property="og:description" content="Hatha Yoga • Respiração • Relaxamento. Agende sua aula experimental pelo WhatsApp." />
-  <meta property="og:url" content="https://ametistayoga.com.br/informacoes" />
-  <meta property="og:image" content="https://ametistayoga.com.br/assets/og-cover.webp" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Informações | Ametista – Espaço de Yoga em BH" />
-  <meta name="twitter:description" content="Aulas de Hatha Yoga no Santo Antônio (BH). Agende uma aula experimental." />
-  <meta name="twitter:image" content="https://ametistayoga.com.br/assets/og-cover.webp" />
-
-  <!-- Favicons -->
-  <link rel="icon" href="assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <meta name="theme-color" content="#cf5f36" />
-  <!-- Schema (SEO local) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Ametista - Espaço de Yoga",
-    "description":"Aulas de Hatha Yoga em Belo Horizonte (Santo Antônio). Turmas pequenas, asanas, pranayamas e Yoga Nidra. Aula experimental via WhatsApp.",
-    "url":"https://ametistayoga.com.br/",
-    "image":"https://ametistayoga.com.br/assets/og-cover.jpg",
-    "telephone":"+55-31-99708-7839",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Belo Horizonte",
-      "addressRegion":"MG",
-      "addressCountry":"BR",
-      "streetAddress":"Bairro Santo Antônio"
-    },
-    "sameAs":[
-      "https://instagram.com/ametistayogabh"
-    ],
-    "areaServed":"Belo Horizonte"
-  }
-  </script>
-
-  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/info.css">
-  <link rel="stylesheet" href="assets/css/menu.css">
+
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="info.css">
 </head>
 
-<body class="page-info">
-  <!-- Header -->
- <header class="site-header">
-  <div class="wrap">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Voltar para o início">
-        <img src="assets/logo.webp" alt="Ametista - Espaço de Yoga">
-        <span>Ametista - Espaço de Yoga</span>
-      </a>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Voltar para o início">
+          <img src="assets/logo.webp" alt="Ametista - Espaço de Yoga">
+          <span>Ametista - Espaço de Yoga</span>
+        </a>
 
-      <nav class="nav" id="siteNav" aria-label="Navegação principal">
-        <button class="nav-toggle" id="navToggle" type="button"
-                aria-label="Abrir menu"
-                aria-controls="mobileMenu"
-                aria-expanded="false">
-          <span class="nav-toggle__bar"></span>
-          <span class="nav-toggle__bar"></span>
-          <span class="nav-toggle__bar"></span>
-        </button>
+        <nav class="nav" aria-label="Navegação principal">
+          <button class="nav-toggle" id="navToggle" type="button"
+                  aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </button>
 
-        <div class="nav-links">
-          <a class="active" href="index.html">Início</a>
-          <a href="info.html">Informações</a>
-          <a href="local.html">Local</a>
-          <a href="sobre.html">Sobre mim</a>
-          <a href="inscreva.html">Inscreva-se</a>
-        </div>
-      </nav>
+          <div class="nav-links">
+            <a href="index.html">Início</a>
+            <a class="active" href="info.html">Informações</a>
+            <a href="local.html">Local</a>
+            <a href="sobre.html">Sobre mim</a>
+            <a href="inscreva.html">Inscreva-se</a>
+          </div>
+        </nav>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="nav-overlay" id="navOverlay" hidden></div>
+  <div class="nav-overlay" id="navOverlay" hidden></div>
+  <aside class="mobile-menu" id="mobileMenu" hidden aria-label="Menu mobile">
+    <div class="mobile-menu__links">
+      <a href="index.html">Início</a>
+      <a class="active" href="info.html">Informações</a>
+      <a href="local.html">Local</a>
+      <a href="sobre.html">Sobre mim</a>
+      <a href="inscreva.html">Inscreva-se</a>
+    </div>
+    <div class="mobile-menu__cta">
+      <a class="mobile-menu__btn" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noreferrer">
+        Agendar aula experimental
+      </a>
+    </div>
+  </aside>
 
-<aside class="mobile-menu" id="mobileMenu" hidden aria-label="Menu mobile">
-  <div class="mobile-menu__links">
-    <a class="active" href="index.html">Início</a>
-    <a href="info.html">Informações</a>
-    <a href="local.html">Local</a>
-    <a href="sobre.html">Sobre mim</a>
-    <a href="inscreva.html">Inscreva-se</a>
-  </div>
-
-  <div class="mobile-menu__cta">
-    <a class="mobile-menu__btn" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noreferrer">
-      Agendar aula experimental
-    </a>
-  </div>
-</aside>
-
-  <!-- Hero -->
   <section class="hero" aria-label="Informações">
     <div class="wrap hero-content">
       <span class="kicker">Informações • Hatha Yoga • BH</span>
       <h1>Yoga no Santo Antônio, BH<br><span style="font-weight:600;">Aulas acessíveis e acolhedoras</span></h1>
-      <p>
-        Turmas pequenas, acompanhamento cuidadoso e uma prática completa: posturas (Asanas),
-        respiração (Pranayamas) e relaxamento profundo (Yoga Nidra).
-      </p>
+      <p>Turmas pequenas, acompanhamento cuidadoso e uma prática completa: Asanas, Pranayamas e Yoga Nidra.</p>
 
       <div class="cta-row">
-        <a class="btn primary" id="cta-hero-whatsapp"
-           href="https://wa.me/SEU_NUMERO_AQUI"
-           target="_blank" rel="noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <a class="btn primary" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M20 11.5a8.5 8.5 0 1 1-3.2-6.6"></path>
             <path d="M20 4v6h-6"></path>
           </svg>
           Agendar aula experimental
         </a>
-
-        <a class="btn" href="#aulas">
-          Ver detalhes das aulas
-        </a>
+        <a class="btn" href="#aulas">Ver detalhes das aulas</a>
       </div>
-
       <h2 class="sr-only">Ametista – Espaço de Yoga</h2>
     </div>
   </section>
 
-  <!-- Conteúdo -->
-  <main class="section" id="informacoes">
+  <main class="section">
     <div class="wrap intro">
       <div class="panel">
-        <p>
-          Somos um espaço de Yoga localizado no <strong>bairro Santo Antônio</strong>, em Belo Horizonte.
-          Aqui você encontra uma prática segura, respeitosa ao seu ritmo e pensada para melhorar
-          força, flexibilidade, respiração, sono e bem-estar.
-        </p>
+        <p>Somos um espaço de Yoga localizado no <strong>bairro Santo Antônio</strong>, em Belo Horizonte. Prática segura, respeitosa ao seu ritmo, para força, flexibilidade, respiração, sono e bem-estar.</p>
       </div>
 
-      <!-- Aulas -->
       <div class="grid" id="aulas">
-        <!-- Coletivas -->
         <article class="card">
           <h2>Aulas coletivas</h2>
           <div class="meta">
@@ -165,55 +93,23 @@
             <span class="pill">Hatha Yoga</span>
           </div>
 
-          <p>
-            Aula completa com <strong>Asanas</strong> (posturas psicofísicas),
-            <strong>Pranayamas</strong> (práticas respiratórias) e
-            <strong>Yoga Nidra</strong> (relaxamento profundo).
-          </p>
+          <p>Aula com <strong>Asanas</strong>, <strong>Pranayamas</strong> e <strong>Yoga Nidra</strong>.</p>
 
           <ul class="list">
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20 6L9 17l-5-5"></path>
-                </svg>
-              </span>
-              Aumenta flexibilidade, força e vitalidade.
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20 6L9 17l-5-5"></path>
-                </svg>
-              </span>
-              Ajuda a reduzir ansiedade e estresse e melhora o sono.
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20 6L9 17l-5-5"></path>
-                </svg>
-              </span>
-              Acessível para iniciantes (movimentos explicados e demonstrados).
-            </li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Aumenta flexibilidade, força e vitalidade.</li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Ajuda a reduzir ansiedade e melhora o sono.</li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Acessível para iniciantes.</li>
           </ul>
 
           <div class="schedule" aria-label="Horários aulas coletivas">
             <h3>Horários (aulas coletivas)</h3>
             <div class="rows">
-              <div class="row">
-                <strong>Quarta-feira</strong>
-                <span>20h</span>
-              </div>
-              <div class="row">
-                <strong>Quinta-feira</strong>
-                <span>20h</span>
-              </div>
+              <div class="row"><strong>Quarta-feira</strong><span>20h</span></div>
+              <div class="row"><strong>Quinta-feira</strong><span>20h</span></div>
             </div>
           </div>
         </article>
 
-        <!-- Particulares -->
         <article class="card">
           <h2>Aulas particulares</h2>
           <div class="meta">
@@ -222,58 +118,25 @@
             <span class="pill">Horários flexíveis</span>
           </div>
 
-          <p>
-            Práticas adaptadas para suas necessidades, com acompanhamento próximo e plano
-            de evolução de acordo com seu ritmo e objetivos.
-          </p>
+          <p>Práticas adaptadas, acompanhamento próximo e plano de evolução no seu ritmo.</p>
 
           <ul class="list">
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20 6L9 17l-5-5"></path>
-                </svg>
-              </span>
-              Indicado para dores (costas, joelho, quadril), estresse e ansiedade.
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20 6L9 17l-5-5"></path>
-                </svg>
-              </span>
-              Ótimo para iniciantes que preferem mais orientação.
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20 6L9 17l-5-5"></path>
-                </svg>
-              </span>
-              Aulas em horários que se adequam à sua rotina.
-            </li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Indicado para dores, estresse e ansiedade.</li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Ótimo para iniciantes que preferem mais orientação.</li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Aulas em horários que se adequam à sua rotina.</li>
           </ul>
 
           <div class="schedule" aria-label="Como agendar aulas particulares">
             <h3>Como funciona</h3>
             <div class="rows">
-              <div class="row">
-                <strong>Agendamento</strong>
-                <span>via WhatsApp</span>
-              </div>
-              <div class="row">
-                <strong>Local</strong>
-                <span>espaço ou casa do aluno</span>
-              </div>
+              <div class="row"><strong>Agendamento</strong><span>via WhatsApp</span></div>
+              <div class="row"><strong>Local</strong><span>espaço ou casa do aluno</span></div>
             </div>
           </div>
 
           <div style="margin-top:14px;">
-            <a class="btn primary" id="cta-card-whatsapp"
-               href="https://wa.me/SEU_NUMERO_AQUI"
-               target="_blank" rel="noreferrer"
-               style="width:100%; justify-content:center;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <a class="btn primary" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noreferrer" style="width:100%; justify-content:center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M20 11.5a8.5 8.5 0 1 1-3.2-6.6"></path>
                 <path d="M20 4v6h-6"></path>
               </svg>
@@ -283,68 +146,40 @@
         </article>
       </div>
 
-      <!-- Para quem é -->
       <section class="section" style="padding:14px 0 8px;">
         <div class="card">
           <h2>Para quem é o Yoga na Ametista?</h2>
           <p>As aulas são ideais para você que:</p>
           <ul class="list">
-            <li><span class="check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-            </span> Quer aliviar dores e melhorar a postura.</li>
-            <li><span class="check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-            </span> Busca mais qualidade de sono e bem-estar.</li>
-            <li><span class="check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-            </span> Está ansiosa(o) / estressada(o) e quer desacelerar.</li>
-            <li><span class="check" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-            </span> Nunca praticou Yoga e quer começar com segurança.</li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Quer aliviar dores e melhorar a postura.</li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Busca mais qualidade de sono e bem-estar.</li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Quer desacelerar (ansiedade/estresse).</li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg></span>Nunca praticou e quer começar com segurança.</li>
           </ul>
         </div>
       </section>
     </div>
   </main>
 
-  <!-- Depoimentos -->
-<section class="testimonials" aria-label="Depoimentos">
-  <div class="wrap">
-    <h2>Alguns depoimentos espontâneos de alunos</h2>
+  <section class="testimonials" aria-label="Depoimentos">
+    <div class="wrap">
+      <h2>Alguns depoimentos espontâneos de alunos</h2>
 
-    <div class="t-slider" data-slider>
-      <div class="t-track" data-track>
-        <article class="t-card">
-          <p>“Obrigada mais uma vez Cris, eu estava aqui com umas dores e tô beeeem melhor, joelho, torcicolo, agora estou esperando o bebê dormir bem mais leve.”</p>
-          <strong>— Ariane</strong>
-        </article>
+      <div class="t-slider" data-slider>
+        <div class="t-track" data-track>
+          <article class="t-card"><p>“Obrigada mais uma vez Cris... joelho, torcicolo... bebê dormiu bem mais leve.”</p><strong>— Ariane</strong></article>
+          <article class="t-card"><p>“Nossa Cris!! ... achei o que eu procurava!!! ... dor nas costas ... tô nova!”</p><strong>— Letícia</strong></article>
+          <article class="t-card"><p>“Se eu soubesse há mais tempo... Vou contar os dias... dormi profundamente.”</p><strong>— Carla</strong></article>
+          <article class="t-card"><p>“Puerpério difícil... me sinto mais equilibrada... na primeira aula eu sorri de verdade.”</p><strong>— Ana</strong></article>
+        </div>
 
-        <article class="t-card">
-          <p>“Nossa Cris!! Acabei de falar com meu marido que eu achei o que eu procurava!!! Eu estava com dor nas costas e agora tô nova!! Rs... Amei muito!! Muuuito obrigada mesmo!!”</p>
-          <strong>— Letícia</strong>
-        </article>
-
-        <article class="t-card">
-          <p>“Se eu soubesse há mais tempo que era tão maravilhoso já teria feito viu. Vou contar os dias para a próxima aula, dormi profundamente.”</p>
-          <strong>— Carla</strong>
-        </article>
-
-        <article class="t-card">
-          <p>“Estava passando por um puerpério difícil e confuso... Desde que comecei o Yoga com você me sinto mais equilibrada, disposta, a coluna e a pelve melhoraram demais... Na primeira aula eu consegui sorrir de verdade.”</p>
-          <strong>— Ana</strong>
-        </article>
+        <button class="t-btn prev" type="button" aria-label="Depoimento anterior" data-prev>‹</button>
+        <button class="t-btn next" type="button" aria-label="Próximo depoimento" data-next>›</button>
+        <div class="t-dots" aria-label="Paginação" data-dots></div>
       </div>
-
-      <button class="t-btn prev" type="button" aria-label="Depoimento anterior" data-prev>‹</button>
-      <button class="t-btn next" type="button" aria-label="Próximo depoimento" data-next>›</button>
-
-      <div class="t-dots" aria-label="Paginação" data-dots></div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- Footer -->
   <footer class="footer" aria-label="Rodapé">
     <div class="wrap">
       <div class="footer-inner">
@@ -358,7 +193,7 @@
         </div>
 
         <a class="ig" href="https://instagram.com/ametistayogabh" target="_blank" rel="noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#cf5f36" stroke-width="2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#cf5f36" stroke-width="2" aria-hidden="true">
             <rect x="4" y="4" width="16" height="16" rx="4"></rect>
             <circle cx="12" cy="12" r="4"></circle>
             <circle cx="17" cy="7" r="1"></circle>
@@ -368,10 +203,9 @@
     </div>
   </footer>
 
-  <!-- CTA fixo no mobile -->
   <div class="sticky-cta" aria-label="Agendar no WhatsApp">
-    <a id="cta-sticky-whatsapp" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noreferrer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
         <path d="M20 11.5a8.5 8.5 0 1 1-3.2-6.6"></path>
         <path d="M20 4v6h-6"></path>
       </svg>
@@ -379,46 +213,7 @@
     </a>
   </div>
 
-  <!-- (Opcional) Tagueamento por dataLayer (GTM/GA4) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function dlPush(eventName, payload){
-      window.dataLayer.push(Object.assign({ event: eventName }, payload || {}));
-    }
-
-    document.addEventListener('click', function(e){
-      const a = e.target.closest('a');
-      if(!a) return;
-
-      const id = a.id || '';
-      const url = a.href || '';
-
-      if(id.includes('cta') && url.includes('wa.me')){
-        dlPush('cta_click', { cta_name: 'whatsapp', cta_location: id, link_url: url });
-      }
-    });
-
-    (function(){
-      const marks = [25,50,75,90];
-      const fired = new Set();
-      function onScroll(){
-        const doc = document.documentElement;
-        const st = doc.scrollTop || document.body.scrollTop;
-        const sh = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
-        if(sh <= 0) return;
-        const pct = Math.round((st / sh) * 100);
-        marks.forEach(m => {
-          if(pct >= m && !fired.has(m)){
-            fired.add(m);
-            dlPush('scroll_depth', { percent: m });
-          }
-        });
-      }
-      window.addEventListener('scroll', onScroll, { passive:true });
-    })();
-  </script>
-  <script src="assets/js/menu.js">  </script>
-      <script src="assets/js/info.js"></script>
-      <script src="assets/js/common.js">  </script>
+  <script src="menu.js"></script>
+  <script src="info.js"></script>
 </body>
 </html>
