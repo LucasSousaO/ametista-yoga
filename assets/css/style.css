@@ -22,7 +22,7 @@
     .wrap{ max-width:var(--container); margin:0 auto; padding:0 24px; }
 
     /* HEADER */
-    .header{
+    .page-info .header{
       position:sticky;
       top:0;
       z-index:50;
