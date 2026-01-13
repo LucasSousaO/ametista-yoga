@@ -55,13 +55,6 @@
   backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
-.page-info .header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  padding:12px 0;
-}
 
 .page-info .brand{
   display:flex;

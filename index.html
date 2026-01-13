@@ -76,19 +76,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- HEADER -->
   <header class="header">
     <div class="wrap">
-      <div class="header-inner">
-        <a class="brand" href="#inicio" aria-label="Ametista - Espaço de Yoga">
-          <img src="assets/logo.webp" alt="">
-          <span>Ametista - Espaço de Yoga</span>
-        </a>
-        <nav class="nav" aria-label="Navegação principal">
-          <a class="active" href="index.html">Início</a>
-          <a href="info.html">Informações</a>
-          <a href="local.html">Local</a>
-          <a href="sobre.html">Sobre mim</a>
-          <a href="inscreva.html">Inscreva-se</a>
-        </nav>
-      </div>
+<nav class="nav" aria-label="Navegação principal">
+  <!-- Botão sanduíche (mobile) -->
+  <button class="nav-toggle" type="button"
+          aria-label="Abrir menu"
+          aria-controls="mobileMenu"
+          aria-expanded="false">
+    <span class="nav-toggle__bar"></span>
+    <span class="nav-toggle__bar"></span>
+    <span class="nav-toggle__bar"></span>
+  </button>
+
+  <!-- Links (desktop) -->
+  <div class="nav-links" aria-label="Links">
+    <a href="index.html">Início</a>
+    <a class="active" href="info.html">Informações</a>
+    <a href="local.html">Local</a>
+    <a href="sobre.html">Sobre mim</a>
+    <a href="inscreva.html">Inscreva-se</a>
+
+    <a class="search" href="index.html#buscar" aria-label="Buscar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="M20 20l-3.5-3.5"></path>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<!-- Overlay + Drawer (mobile) -->
+<div class="nav-overlay" data-menu-close hidden></div>
+
+<aside class="mobile-menu" id="mobileMenu" aria-label="Menu mobile" hidden>
+  <div class="mobile-menu__head">
+    <strong>Menu</strong>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-menu-close>✕</button>
+  </div>
+
+  <div class="mobile-menu__links">
+    <a class="active" href="index.html">Início</a>
+    <a href="info.html">Informações</a>
+    <a href="local.html">Local</a>
+    <a href="sobre.html">Sobre mim</a>
+    <a href="inscreva.html">Inscreva-se</a>
+  </div>
+
+  <div class="mobile-menu__cta">
+    <a class="mobile-menu__btn" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noreferrer">
+      Agendar aula experimental
+    </a>
+  </div>
+</aside>
+
     </div>
   </header>
 
@@ -192,7 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
   </main>
   <script src="assets/js/main.js">  </script>
-
+<script src="assets/js/common.js">  </script>
   
 </body>
 </html>
