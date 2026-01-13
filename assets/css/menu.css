@@ -1,0 +1,185 @@
+/* ===========================
+   MENU GLOBAL (mobile-first)
+   Requer:
+   - <body class="page">
+   - <header class="site-header"> ... </header>
+   - nav id="siteNav"
+   - button id="navToggle"
+   - overlay id="navOverlay"
+   - aside id="mobileMenu"
+   =========================== */
+
+.page *{ box-sizing:border-box; }
+
+.page .site-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.page .wrap{
+  max-width: 1120px;
+  margin:0 auto;
+  padding: 0 16px;
+}
+
+.page .header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:12px 0;
+}
+
+.page .brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+.page .brand img{
+  width:26px; height:26px;
+  object-fit:contain;
+  border-radius:6px;
+}
+.page .brand span{
+  font-size:12px;
+  font-weight:600;
+  color:#444;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:46vw;
+}
+
+/* NAV (desktop links) */
+.page .nav{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:11px;
+  font-weight:800;
+}
+.page .nav a{
+  padding:8px 10px;
+  border-radius:999px;
+  color:#2a2a2a;
+}
+.page .nav a.active{
+  background: rgba(232,200,187,.85); /* pêssego */
+}
+
+/* Search icon wrapper (optional) */
+.page .nav .search{
+  width:36px; height:36px;
+  display:grid; place-items:center;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.08);
+  background:#fff;
+}
+.page .nav .search svg{ width:16px; height:16px; opacity:.85; }
+
+/* Toggle button (mobile) */
+.page .nav-toggle{ display:none; }
+.page .nav-toggle__bar{
+  width:18px; height:2px;
+  background:#333;
+  border-radius:999px;
+  display:block;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+/* Overlay + drawer */
+.page .nav-overlay{
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,.35);
+  z-index: 80;
+}
+
+.page .mobile-menu{
+  position:fixed;
+  top:0; right:0;
+  height:100vh;
+  width:min(320px, 86vw);
+  background:#fff;
+  z-index: 90;
+  border-left:1px solid rgba(0,0,0,.08);
+  box-shadow: -20px 0 50px rgba(0,0,0,.20);
+  display:flex;
+  flex-direction:column;
+  padding:14px;
+
+  transform: translateX(102%);
+  transition: transform .22s ease;
+}
+
+.page .mobile-menu.is-open{ transform: translateX(0); }
+
+.page .mobile-menu__links{
+  padding:6px 0 12px;
+  display:grid;
+  gap:10px;
+}
+.page .mobile-menu__links a{
+  padding:14px 14px;
+  border-radius:14px;
+  font-weight:900;
+  color:#2a2a2a;
+  background:#f6f6f7;
+  border:1px solid rgba(0,0,0,.06);
+}
+.page .mobile-menu__links a.active{
+  background: rgba(232,200,187,.85);
+}
+
+.page .mobile-menu__cta{
+  margin-top:auto;
+  padding-top:12px;
+  border-top:1px solid rgba(0,0,0,.06);
+}
+.page .mobile-menu__btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 16px;
+  border-radius:999px;
+  font-weight:900;
+  background:#cf5f36;
+  color:#fff;
+}
+
+/* MOBILE BREAKPOINT */
+@media (max-width: 860px){
+  .page .nav-links{ display:none; }
+  .page .nav-toggle{
+    display:inline-flex;
+    width:42px; height:42px;
+    border-radius:999px;
+    border:1px solid rgba(0,0,0,.10);
+    background:#fff;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
+    cursor:pointer;
+  }
+
+  /* Toggle vira X (no próprio botão) */
+  .page .nav-toggle.is-open .nav-toggle__bar:nth-child(1){
+    transform: translateY(6px) rotate(45deg);
+  }
+  .page .nav-toggle.is-open .nav-toggle__bar:nth-child(2){
+    opacity:0;
+  }
+  .page .nav-toggle.is-open .nav-toggle__bar:nth-child(3){
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
+
+@media (min-width: 860px){
+  .page .wrap{ padding:0 22px; }
+  .page .nav-links{ display:flex; align-items:center; gap:10px; }
+}

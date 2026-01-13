@@ -60,48 +60,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/info.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
 </head>
 
 <body class="page-info">
   <!-- Header -->
-  <header class="header">
-    <div class="wrap">
-<nav class="nav" aria-label="Navegação principal">
-  <!-- Botão sanduíche (mobile) -->
-  <button class="nav-toggle" type="button"
-          aria-label="Abrir menu"
-          aria-controls="mobileMenu"
-          aria-expanded="false">
-    <span class="nav-toggle__bar"></span>
-    <span class="nav-toggle__bar"></span>
-    <span class="nav-toggle__bar"></span>
-  </button>
+ <header class="site-header">
+  <div class="wrap">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Voltar para o início">
+        <img src="assets/logo.webp" alt="Ametista - Espaço de Yoga">
+        <span>Ametista - Espaço de Yoga</span>
+      </a>
 
-  <!-- Links (desktop) -->
-  <div class="nav-links" aria-label="Links">
-    <a href="index.html">Início</a>
-    <a class="active" href="info.html">Informações</a>
-    <a href="local.html">Local</a>
-    <a href="sobre.html">Sobre mim</a>
-    <a href="inscreva.html">Inscreva-se</a>
-  </div>
-</nav>
+      <nav class="nav" id="siteNav" aria-label="Navegação principal">
+        <button class="nav-toggle" id="navToggle" type="button"
+                aria-label="Abrir menu"
+                aria-controls="mobileMenu"
+                aria-expanded="false">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
 
+        <div class="nav-links">
+          <a class="active" href="index.html">Início</a>
+          <a href="info.html">Informações</a>
+          <a href="local.html">Local</a>
+          <a href="sobre.html">Sobre mim</a>
+          <a href="inscreva.html">Inscreva-se</a>
+        </div>
+      </nav>
     </div>
-  </header>
-
-  <!-- Overlay + Drawer (mobile) -->
-<div class="nav-overlay" data-menu-close hidden></div>
-
-<aside class="mobile-menu" id="mobileMenu" aria-label="Menu mobile" hidden>
-  <div class="mobile-menu__head">
-    <strong>Menu</strong>
-    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-menu-close>✕</button>
   </div>
+</header>
 
+<div class="nav-overlay" id="navOverlay" hidden></div>
+
+<aside class="mobile-menu" id="mobileMenu" hidden aria-label="Menu mobile">
   <div class="mobile-menu__links">
-    <a href="index.html">Início</a>
-    <a class="active" href="info.html">Informações</a>
+    <a class="active" href="index.html">Início</a>
+    <a href="info.html">Informações</a>
     <a href="local.html">Local</a>
     <a href="sobre.html">Sobre mim</a>
     <a href="inscreva.html">Inscreva-se</a>
@@ -113,6 +112,7 @@
     </a>
   </div>
 </aside>
+
   <!-- Hero -->
   <section class="hero" aria-label="Informações">
     <div class="wrap hero-content">
@@ -417,6 +417,7 @@
       window.addEventListener('scroll', onScroll, { passive:true });
     })();
   </script>
+  <script src="assets/js/menu.js">  </script>
       <script src="assets/js/info.js"></script>
       <script src="assets/js/common.js">  </script>
 </body>
