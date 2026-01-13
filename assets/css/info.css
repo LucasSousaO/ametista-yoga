@@ -496,3 +496,56 @@
   .page-info .t-card{ flex-basis: 48%; }
   .page-info .t-btn{ display:flex; }
 }
+/* =========================================
+   FIX: impedir SVG gigante por conflito com style.css
+   Cole no FINAL do info.css
+   ========================================= */
+
+/* Regra “trava tudo” só na página de informações */
+.page-info svg{
+  width: 1em !important;
+  height: 1em !important;
+  max-width: 1em !important;
+  max-height: 1em !important;
+}
+
+/* Ícones dentro de botões (hero + cards + sticky CTA) */
+.page-info .btn svg{
+  width: 16px !important;
+  height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  flex: 0 0 16px;
+}
+
+.page-info .sticky-cta svg{
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  flex: 0 0 18px;
+}
+
+/* Ícone do Instagram no footer */
+.page-info .ig svg{
+  width: 22px !important;
+  height: 22px !important;
+  max-width: 22px !important;
+  max-height: 22px !important;
+}
+
+/* Check das listas */
+.page-info .check svg{
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px !important;
+  max-height: 14px !important;
+}
+
+/* Extra: garante que o container do check não estoure */
+.page-info .check{
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 18px !important;
+  overflow: hidden;
+}
