@@ -542,3 +542,112 @@
   flex: 0 0 18px !important;
   overflow: hidden;
 }
+/* ===========================
+   MENU SANDUÍCHE (MOBILE)
+   =========================== */
+
+/* Desktop: mostra links e esconde toggle */
+.page-info .nav-toggle { display:none; }
+.page-info .nav-links { display:flex; align-items:center; gap:10px; }
+
+/* Mobile: mostra toggle e esconde links horizontais */
+@media (max-width: 860px){
+  .page-info .nav-links{ display:none; }
+
+  .page-info .nav-toggle{
+    display:inline-flex;
+    width:42px; height:42px;
+    border-radius:999px;
+    border:1px solid rgba(0,0,0,.10);
+    background:#fff;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
+    cursor:pointer;
+  }
+  .page-info .nav-toggle__bar{
+    width:18px; height:2px;
+    background:#333;
+    border-radius:999px;
+    display:block;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  /* quando aberto, vira “X” no próprio botão (sem X no menu) */
+  .page-info .nav-toggle.is-open .nav-toggle__bar:nth-child(1){
+    transform: translateY(6px) rotate(45deg);
+  }
+  .page-info .nav-toggle.is-open .nav-toggle__bar:nth-child(2){
+    opacity: 0;
+  }
+  .page-info .nav-toggle.is-open .nav-toggle__bar:nth-child(3){
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* overlay */
+  .page-info .nav-overlay{
+    position:fixed;
+    inset:0;
+    background: rgba(0,0,0,.35);
+    z-index: 80;
+  }
+
+  /* drawer (começa fechado fora da tela) */
+  .page-info .mobile-menu{
+    position:fixed;
+    top:0; right:0;
+    height:100vh;
+    width:min(320px, 86vw);
+    background:#fff;
+    z-index: 90;
+    border-left:1px solid rgba(0,0,0,.08);
+    box-shadow: -20px 0 50px rgba(0,0,0,.20);
+    display:flex;
+    flex-direction:column;
+    padding:14px;
+
+    transform: translateX(102%);
+    transition: transform .22s ease;
+  }
+
+  /* quando aberto */
+  .page-info .mobile-menu.is-open{
+    transform: translateX(0);
+  }
+
+  .page-info .mobile-menu__links{
+    padding:6px 0 12px;
+    display:grid;
+    gap:10px;
+  }
+
+  .page-info .mobile-menu__links a{
+    padding:14px 14px;
+    border-radius:14px;
+    font-weight:800;
+    color:#2a2a2a;
+    background: #f6f6f7;
+    border:1px solid rgba(0,0,0,.06);
+  }
+
+  .page-info .mobile-menu__links a.active{
+    background: var(--accent-2);
+  }
+
+  .page-info .mobile-menu__cta{
+    margin-top:auto;
+    padding-top:12px;
+    border-top:1px solid rgba(0,0,0,.06);
+  }
+
+  .page-info .mobile-menu__btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 16px;
+    border-radius:999px;
+    font-weight:900;
+    background: var(--accent);
+    color:#fff;
+  }
+}

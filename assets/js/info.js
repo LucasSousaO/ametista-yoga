@@ -1,77 +1,52 @@
 (function(){
-    const slider = document.querySelector('[data-slider]');
-    if(!slider) return;
+  const btn = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('navOverlay');
 
-    const track = slider.querySelector('[data-track]');
-    const btnPrev = slider.querySelector('[data-prev]');
-    const btnNext = slider.querySelector('[data-next]');
-    const dotsWrap = slider.querySelector('[data-dots]');
-    const cards = Array.from(track.children);
+  if(!btn || !menu || !overlay) return;
 
-    // cria dots
-    const dots = cards.map((_, i) => {
-      const b = document.createElement('button');
-      b.className = 't-dot';
-      b.type = 'button';
-      b.setAttribute('aria-label', `Ir para depoimento ${i+1}`);
-      b.addEventListener('click', () => scrollToIndex(i));
-      dotsWrap.appendChild(b);
-      return b;
-    });
+  function openMenu(){
+    btn.classList.add('is-open');
+    menu.classList.add('is-open');
+    btn.setAttribute('aria-expanded','true');
+    overlay.hidden = false;
+    menu.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+  }
 
-    function currentIndex(){
-      const left = track.scrollLeft;
-      const w = cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap || 0);
-      return Math.round(left / w);
-    }
+  function closeMenu(){
+    btn.classList.remove('is-open');
+    menu.classList.remove('is-open');
+    btn.setAttribute('aria-expanded','false');
+    overlay.hidden = true;
 
-    function setActiveDot(i){
-      dots.forEach((d, idx) => d.setAttribute('aria-current', idx === i ? 'true' : 'false'));
-    }
+    // espera a animação terminar antes de esconder de vez
+    window.setTimeout(() => { menu.hidden = true; }, 220);
+    document.documentElement.style.overflow = '';
+  }
 
-    function scrollToIndex(i){
-      const card = cards[i];
-      if(!card) return;
-      const x = card.offsetLeft;
-      track.scrollTo({ left: x, behavior: 'smooth' });
-      setActiveDot(i);
-    }
+  function isOpen(){
+    return btn.classList.contains('is-open');
+  }
 
-    function step(dir){
-      const i = currentIndex();
-      const next = Math.max(0, Math.min(cards.length - 1, i + dir));
-      scrollToIndex(next);
-    }
+  btn.addEventListener('click', () => {
+    isOpen() ? closeMenu() : openMenu();
+  });
 
-    btnPrev && btnPrev.addEventListener('click', () => step(-1));
-    btnNext && btnNext.addEventListener('click', () => step(1));
+  overlay.addEventListener('click', closeMenu);
 
-    // atualiza dots ao arrastar (scroll)
-    let raf = null;
-    track.addEventListener('scroll', () => {
-      if(raf) cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => setActiveDot(currentIndex()));
-    }, { passive:true });
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && isOpen()) closeMenu();
+  });
 
-    // swipe: já funciona pelo scroll; isso aqui melhora “snapping” em alguns aparelhos
-    let isDown = false, startX = 0, startLeft = 0;
-    track.addEventListener('pointerdown', (e) => {
-      isDown = true;
-      startX = e.clientX;
-      startLeft = track.scrollLeft;
-      track.setPointerCapture(e.pointerId);
-    });
-    track.addEventListener('pointermove', (e) => {
-      if(!isDown) return;
-      const dx = e.clientX - startX;
-      track.scrollLeft = startLeft - dx;
-    });
-    track.addEventListener('pointerup', () => {
-      isDown = false;
-      // "snap" para o card mais próximo
-      scrollToIndex(currentIndex());
-    });
+  // fecha ao clicar em qualquer link do menu
+  menu.addEventListener('click', (e) => {
+    const a = e.target.closest('a');
+    if(a) closeMenu();
+  });
 
-    // inicial
-    setActiveDot(0);
-  })();
+  // estado inicial (garante fechado)
+  overlay.hidden = true;
+  menu.hidden = true;
+  btn.setAttribute('aria-expanded','false');
+})();
